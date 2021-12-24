@@ -223,7 +223,6 @@ if s == 0:
             grau[c-1] += 1
             grau[f-1] += 1
             arestas +=1 
-    a = time()
 
 elif s == 1:
     for par in aresta:
