@@ -152,16 +152,14 @@ def Conexas(s, grafo, vertices):
         else:
             c = BFS_list(grafo, vertices, desmarcados[0])[0]
         retirar = []
-        count = 0
         for i in desmarcados:
             if c[i-1] == 1:
                 inicial.append(i)
-                retirar.append(count)
-            count += 1
+                retirar.append(i)
         for i in retirar:
-            desmarcados.pop(i)
+            desmarcados.remove(i)
         componentes.append(inicial)
-    
+        
     componentes.sort(key=len, reverse= True)
     return componentes
 
